@@ -5,7 +5,7 @@ import privateData from './../privateData';
 
 class App extends React.Component {
   render() {
-    utils.getNutritionData(privateData.apiKey);
+    utils.getNutritentsByNdbno(privateData.apiKey,11821);
     return (
       <div className="App">
         <h1>Hi!</h1>
