@@ -32,7 +32,6 @@ class SearchBar extends React.Component {
             value={this.state.value}
             onChange={this.handleChange.bind(null)}
           />
-          <input type="submit" value="Submit" />
         </form>
       </div>
     );
@@ -43,10 +42,16 @@ class SearchResults extends React.Component {
   render() {
     return (
       <div className='searchResults'>
-        <div>I am a list of results!</div>
         <ul className='searchResultsContainer'>
           {this.props.results.map((result, i) => {
-            return <SearchResult key={i} result={result} keyValue={i} addRemoveIngredient={this.props.addRemoveIngredient} />
+            return (
+              <SearchResult
+                key={i}
+                result={result}
+                keyValue={i}
+                addRemoveIngredient={this.props.addRemoveIngredient}
+              />
+            )
           })}
         </ul>
       </div>
@@ -55,14 +60,40 @@ class SearchResults extends React.Component {
 }
 
 class SearchResult extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      selected: false
+    }
+    this.changeSelection = this.changeSelection.bind(this);
+  }
+
+  changeSelection(){
+    // Add or remove ingredient from selected ingredient list
+    this.props.addRemoveIngredient(this.props.result)
+
+    // Update ingredient color to show selected/unselected
+    if (this.state.selected === true) {
+      this.setState({selected: false});
+    } else {
+      this.setState({selected: true});
+    }
+  }
+
   render() {
     return (
-      <li key={this.props.i}>
-        <div className='searchResult'>
-          <div className='searchResultName'>{this.props.result.name}</div>
-          <div className='searchResultNdbno'>{this.props.result.ndbno}</div>
-          <input type='button' value='Add me!' onClick={this.props.addRemoveIngredient.bind(null, this.props.result)} />
-        </div>
+      <li
+        className='searchResult'
+        key={this.props.i}
+        onClick={this.changeSelection.bind(null)}
+        style={
+          this.state.selected === true
+          ? {backgroundColor: 'var(--color-search-results-selected)'}
+          : {backgroundColor: 'var(--color-search-results-unselected)'}
+          }
+      >
+        <div className='searchResultName'>{this.props.result.name}</div>
+        <div className='searchResultNdbno'>{this.props.result.ndbno}</div>
       </li>
     );
   }
@@ -72,6 +103,7 @@ class IngredientList extends React.Component {
   render() {
     return (
       <div className='ingredientList'>
+        <h3>Selected ingredients</h3>
         <ul>
           {this.props.ingredientList.map((ingredient, i)=>{
             return <IngredientSelected key={i} keyValue={i} ingredient={ingredient} />
@@ -117,6 +149,7 @@ class IngredientsSearch extends React.Component {
     );
   }
 
+  // Add or remove ingredient from selected ingredient list
   addRemoveIngredient(ingredient){
     
     // Copy existing ingredient list

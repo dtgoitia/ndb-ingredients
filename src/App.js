@@ -83,11 +83,11 @@ class App extends React.Component {
     }
 
     // If config loaded and loadAutoSaveOnStart=true, load state
-    if (this.state.config && this.state.config.loadAutoSaveOnStart === true && this.state.load == true) {
+    if (this.state.config && this.state.config.loadAutoSaveOnStart === true && this.state.load === true) {
       this.load('autosave.json');
     }
 
-    console.log('App > this.state:', this.state);
+    // console.log('App > this.state:', this.state);
     return (
       <div className="App">
         <NavigationBar activeTab={this.state.activeTab} changeActiveTab={this.changeActiveTab} />
