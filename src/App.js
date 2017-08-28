@@ -12,7 +12,54 @@ class App extends React.Component {
       load: true,
       activeTab: 'Ingredient Search',
       // activeTab: 'Schedules',
-      ingredientList: []
+      ingredientList: [],
+      weekPlanning: [
+        {
+          day: 'Monday',
+          meals: [
+            {
+              name: 'Meal 1',
+              dishes: [
+                {
+                  name: 'Basic salad',
+                  recipe: [
+                    {name: "ingredient 1", calories: "loads"},
+                    {name: "ingredient 2", calories: "less"},
+                  ]
+                },
+                {
+                  name: 'Basic salad feta',
+                  recipe: [
+                    {name: "ingredient 1", calories: "loads"},
+                    {name: "ingredient 2", calories: "less"},
+                    {name: "feta cheese", calories: "a bit"},
+                  ]
+                }
+              ]
+            },
+            {
+              name: 'Meal 2',
+              dishes: [
+                {
+                  name: 'Basic salad 2',
+                  recipe: [
+                    {name: "ingredient 1", calories: "loads"},
+                    {name: "ingredient 2", calories: "less"},
+                  ]
+                },
+                {
+                  name: 'Basic salad feta 2',
+                  recipe: [
+                    {name: "ingredient 1", calories: "loads"},
+                    {name: "ingredient 2", calories: "less"},
+                    {name: "feta cheese", calories: "a bit"},
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
 
     this.addIngredientsToMyCollection = this.addIngredientsToMyCollection.bind(this);
@@ -103,6 +150,7 @@ class App extends React.Component {
           this.state.activeTab === 'Schedules' ?
           <Schedules
             ingredientList={this.state.ingredientList}
+            state={this.state}
           /> : null
         }
       </div>

@@ -111,3 +111,50 @@ div {
   border-radius: 10px;
   background-color: var(--color-search-results-unselected)
 }
+
+
+
+/* --- SCHEDULES ---------------------------------------- */
+
+.schedules {
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 100px auto;
+}
+.schedulesIngredientList {
+  grid-column: 1;
+  grid-row: 1/3;
+
+  background-color: black;
+  border-radius: 10px;
+}
+
+.schedulesDish {
+  padding: 5px;
+  text-align: left;
+  border: 1px solid yellow;
+}
+.schedulesDish input[type=text] {
+  grid-column: 1;
+  grid-row: 1;
+
+  padding: 5px 5px 5px 8px;
+  font-size: 110%;
+}
+.scheduleDishIngredientList {
+  grid-template-columns: 100px 100px auto;
+  padding: 5px;
+  text-align: left;
+  border: 1px solid yellow;
+}
+.scheduleDishIngredientList ingredientName {
+  grid-column: 1;
+}
+.scheduleDishIngredientList ingredientCalories {
+  grid-column: 2;
+}
+.scheduleDishIngredientList ingredientName,
+.scheduleDishIngredientList ingredientCalories {
+  padding: 5px;
+  border: 1px solid red;
+}
