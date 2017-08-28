@@ -6,7 +6,6 @@ import IngredientsSearch from './components/IngredientsSearch';
 
 class App extends React.Component {
   render() {
-    // utils.getIngredientNdbno(privateData.apiKey,'Kerrygold pure irish butter');
     return (
       <div className="App">
         <h1>Hi!</h1>

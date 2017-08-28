@@ -19,8 +19,7 @@ class SearchBar extends React.Component {
 
   handleSubmit(event) {
     console.log('A name was submitted: ' + this.state.value);
-    
-    this.props.getIngredientNdbno(this.props.privateData.apiKey, this.state.value);
+    this.props.getIngredientNdbno(this.props.privateData.apiKey, this.state.value, this.props.handleResults);
     event.preventDefault(); // to avoid the app restarting...
   }
 
@@ -42,13 +41,23 @@ class SearchBar extends React.Component {
 class IngredientsSearch extends React.Component {
   constructor(props){
     super(props)
+    this.state = {}
+
+    this.handleResults = this.handleResults.bind(this);
   }
+
+  handleResults(results){
+    console.log('handleResults() executed!');
+    console.log('results:', results);
+  }
+
   render() {
     return (
       <div>
         <p>Hi!</p>
         <SearchBar
           getIngredientNdbno={this.props.getIngredientNdbno}
+          handleResults={this.handleResults}
           privateData={this.props.privateData}
         />
       </div>
