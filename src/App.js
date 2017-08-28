@@ -5,7 +5,6 @@ import NavigationBar from './components/NavigationBar';
 import Schedules from './components/Schedules';
 import IngredientsSearch from './components/IngredientsSearch';
 
-
 class App extends React.Component {
   constructor(props){
     super(props)
@@ -17,6 +16,10 @@ class App extends React.Component {
 
     this.addIngredientsToMyCollection = this.addIngredientsToMyCollection.bind(this);
     this.changeActiveTab = this.changeActiveTab.bind(this);
+    this.save = this.save.bind(this);
+
+    this.loadConfig();
+    
   }
 
   // Change the active tab shown on screen
@@ -43,8 +46,30 @@ class App extends React.Component {
     this.setState({ingredientList: newIngredientList});
   }
 
+  // Load config settings
+  loadConfig(){
+    // Look for settings file
+    utils.readFile('./config.json', (configData)=>{
+      const config = JSON.parse(configData);
+      this.setState({ config: config });
+    });
+  }
+
+  // Save
+  save(filePath){
+    let content = {
+      state: this.state
+    };  
+    utils.writeFile(filePath,JSON.stringify(content));
+  }
+
   render() {
-    console.log('this.state.ingredientList:', this.state.ingredientList);
+    // If config loaded and autosave is true set autosave
+    if (this.state.config && this.state.config.autosave === true) {
+      setInterval(()=>{this.save('./autosave.json')}, 10*1000);
+    }
+
+    console.log('this.state.ingredientList:', this.state);
     return (
       <div className="App">
         <NavigationBar activeTab={this.state.activeTab} changeActiveTab={this.changeActiveTab} />

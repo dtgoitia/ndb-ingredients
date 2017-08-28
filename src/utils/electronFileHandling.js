@@ -44,7 +44,6 @@ const writeFile = (path, content, foo) => {
     if (err) {
       console.error('ERROR in electronFileHandling.writeFile:', err); // handle error
     } else {                                                          // if sucessfull
-      console.log('File "' + path + '" successfully written');        // log success message
       if (foo) { foo(data) }                                          // if callback available, run it
     }
   })
