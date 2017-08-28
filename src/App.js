@@ -9,6 +9,7 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
+      load: true,
       activeTab: 'Ingredient Search',
       // activeTab: 'Schedules',
       ingredientList: []
@@ -49,7 +50,7 @@ class App extends React.Component {
   // Load config settings
   loadConfig(){
     // Look for settings file
-    utils.readFile('./config.json', (configData)=>{
+    utils.readFile('./nutrition-config.json', (configData)=>{
       const config = JSON.parse(configData);
       this.setState({ config: config });
     });
@@ -63,13 +64,30 @@ class App extends React.Component {
     utils.writeFile(filePath,JSON.stringify(content));
   }
 
+  // Load
+  load(filePath){
+    let readData;
+    const handleReadData = (data) => {
+      readData = JSON.parse(data);
+    
+      this.setState(readData.state);
+      this.setState({load: false});
+    }
+    utils.readFile(filePath,handleReadData);
+  }
+
   render() {
-    // If config loaded and autosave is true set autosave
+    // If config loaded and autosave=true, set autosave
     if (this.state.config && this.state.config.autosave === true) {
-      setInterval(()=>{this.save('./autosave.json')}, 10*1000);
+      setInterval(()=>{this.save('./autosave.json')}, 1*1000);
     }
 
-    console.log('this.state.ingredientList:', this.state);
+    // If config loaded and loadAutoSaveOnStart=true, load state
+    if (this.state.config && this.state.config.loadAutoSaveOnStart === true && this.state.load == true) {
+      this.load('autosave.json');
+    }
+
+    console.log('App > this.state:', this.state);
     return (
       <div className="App">
         <NavigationBar activeTab={this.state.activeTab} changeActiveTab={this.changeActiveTab} />
