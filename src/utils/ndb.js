@@ -33,9 +33,9 @@ const getIngredientNdbno = (apiKey, searchKeyWords, callbackFunction) => {
   }
 }
 
-const utils = {
+const ndb = {
   getNutritentsByNdbno: getNutritentsByNdbno,
   getIngredientNdbno: getIngredientNdbno
 }
 
-module.exports = utils;
+module.exports = ndb;

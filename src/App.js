@@ -1,5 +1,5 @@
 import React from 'react';
-import utils from './utils';
+import utils from './utils/utils';
 import privateData from './../privateData';
 import NavigationBar from './components/NavigationBar';
 import Schedules from './components/Schedules';
