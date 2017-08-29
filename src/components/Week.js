@@ -1,13 +1,12 @@
 import React from 'react';
+import Day from './Day';
 
 class Week extends React.Component {
   render() {
-    console.log('Week this.props:', this.props);
     return (
       <div>
-        <ul>
-          kkk
-        </ul>
+        <Day dayPlanning={this.props.weekPlanning[0]} />
+        <Day dayPlanning={this.props.weekPlanning[1]} />
       </div>
     );
   }

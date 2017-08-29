@@ -68,10 +68,9 @@ class Dish extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      devMode: true,   // --- REMOVE THIS -------------------------------- REMOVE THIS ------
-      name: this.props.dish.name,     // string with dish name
-      editionModeOn: false,
-      recipe: this.props.dish.recipe, // array with ingredients
+      name: this.props.name,
+      editionModeOn: true,
+      recipe: this.props.recipe,
     }
 
     this.updateDishName = this.updateDishName.bind(this);
@@ -97,35 +96,30 @@ class Dish extends React.Component {
   }
 
   render(){
-    // console.log('this.state:', this.state);
-    if (this.state.devMode === false) {
-      return (
-        <div className='schedulesDish'>
-          <DishName name={this.props.name} updateDishName={this.updateDishName} />
-          <DishEditButton changeEditionMode={this.changeEditionMode} />
-          {
-            this.state.editionModeOn === true
-            ? <DishaddNewIngredientButton addNewIngredient={this.addNewIngredient} />
-            : null
-          }
-          {
-            this.state.editionModeOn === true
-            ? <div className='scheduleDishIngredientList'>
-                <ul>
-                  {this.state.recipe.map((ingredient,i)=>{
-                    return <DishIngredient ingredient={ingredient} key={i} />
-                  })}
-                </ul>
-              </div>
-            : null
-          }
-          
-        </div>
-      )
-    } else {
-      return <div>I am a dish</div>
-    }
-    
+    console.log('this.state:', this.state);
+    return (
+      <div className='schedulesDish'>
+        <DishName name={this.props.name} updateDishName={this.updateDishName} />
+        <DishEditButton changeEditionMode={this.changeEditionMode} />
+        {
+          this.state.editionModeOn === true
+          ? <DishaddNewIngredientButton addNewIngredient={this.addNewIngredient} />
+          : null
+        }
+        {
+          this.state.editionModeOn === true
+          ? <div className='scheduleDishIngredientList'>
+              <ul>
+                {this.state.recipe.map((ingredient,i)=>{
+                  return <DishIngredient ingredient={ingredient} key={i} />
+                })}
+              </ul>
+            </div>
+          : null
+        }
+        
+      </div>
+    )
   }
 }
 
