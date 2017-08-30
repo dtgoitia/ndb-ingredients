@@ -34,6 +34,9 @@ body {
   margin: var(--k);
   /* margin: 0px; */
   padding: 0px;
+  
+  -webkit-user-select: none;
+  cursor: context-menu;
 
   background-color: var(--color-body-background);
 }
@@ -143,6 +146,7 @@ div {
 .Monday, .Tuesday, .Wednesday, .Thursday, .Friday, .Saturday, .Sunday {
   border-radius: 10px;
   border: 1px solid yellow;
+  cursor: pointer;
 }
 .Monday    { grid-column: 1 }
 .Tuesday   { grid-column: 2 }
