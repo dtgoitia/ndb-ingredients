@@ -6,7 +6,7 @@ class Day extends React.Component {
     return (
       <div
         className={this.props.dayPlan.day}
-        onClick={()=>{this.props.selectDay()}}
+        onClick={()=>{this.props.selectDay(this.props.dayPlan.day)}}
       >
         <h3>{this.props.dayPlan.day}</h3>
         {this.props.dayPlan.meals.map((meal,i)=>{

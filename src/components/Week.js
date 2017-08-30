@@ -8,11 +8,11 @@ class Week extends React.Component {
 
     this.selectDay = this.selectDay.bind(this);
   }
-  selectDay(){
-    console.info('this day should expand!');
-    let htmlStyles = window.getComputedStyle(document.querySelector("html"));
-    let gridCurrent = parseInt(htmlStyles.getPropertyValue("--gridCurrent"));
-    document.documentElement.style.setProperty("--gridCurrent", "var(--gridMonday)");
+  selectDay(day){
+    console.info(day + ' should expand!');
+    let htmlStyles = window.getComputedStyle(document.querySelector('html'));
+    let gridCurrent = parseInt(htmlStyles.getPropertyValue('--gridCurrent'));
+    document.documentElement.style.setProperty('--gridCurrent', 'var(--grid' + day + ')');
   }
 
   render() {

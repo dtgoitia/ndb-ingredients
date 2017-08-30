@@ -1,13 +1,14 @@
 :root {
   --gridCurrent: var(--gridNone);
+  --gridExpansion: 40%;
   --gridNone:      auto auto auto auto auto auto auto;
-  --gridMonday:    70% auto auto auto auto auto auto;
-  --gridTuesday:   auto 70% auto auto auto auto auto;
-  --gridWednesday: auto auto 70% auto auto auto auto;
-  --gridThursday:  auto auto auto 70% auto auto auto;
-  --gridFriday:    auto auto auto auto 70% auto auto;
-  --gridSaturday:  auto auto auto auto auto 70% auto;
-  --gridSunday:    auto auto auto auto auto auto 70%;
+  --gridMonday:    var(--gridExpansion) auto auto auto auto auto auto;
+  --gridTuesday:   auto var(--gridExpansion) auto auto auto auto auto;
+  --gridWednesday: auto auto var(--gridExpansion) auto auto auto auto;
+  --gridThursday:  auto auto auto var(--gridExpansion) auto auto auto;
+  --gridFriday:    auto auto auto auto var(--gridExpansion) auto auto;
+  --gridSaturday:  auto auto auto auto auto var(--gridExpansion) auto;
+  --gridSunday:    auto auto auto auto auto auto var(--gridExpansion);
 
   --color-body-background: #1b2839;
   --color-h1: rgba(255, 255, 255, 0.70);
@@ -137,7 +138,7 @@ div {
   grid-column-gap: 10px;
 }
 .week h2 {
-  grid-column: 1/7;
+  grid-column: 1/8;
 }
 .Monday, .Tuesday, .Wednesday, .Thursday, .Friday, .Saturday, .Sunday {
   border-radius: 10px;
