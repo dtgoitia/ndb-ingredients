@@ -4,7 +4,7 @@ import Day from './Day';
 class Week extends React.Component {
   render() {
     return (
-      <div>
+      <div className='week'>
         <Day dayPlanning={this.props.weekPlanning[0]} />
         <Day dayPlanning={this.props.weekPlanning[1]} />
       </div>
