@@ -125,11 +125,9 @@ div {
   grid-template-columns: auto auto auto auto auto auto;
   grid-template-rows: auto;
   grid-column-gap: 10px;
-
-  border: 1px solid yellow;
-  border-radius: 10px;
 }
 .Monday, .Tuesday, .Wednesday, .Thursday, .Friday, .Saturday, .Sunday {
+  border-radius: 10px;
   border: 1px solid yellow;
 }
 .Monday    { grid-column: 1 }

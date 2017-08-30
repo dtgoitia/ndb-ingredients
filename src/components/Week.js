@@ -5,8 +5,10 @@ class Week extends React.Component {
   render() {
     return (
       <div className='week'>
-        <Day dayPlanning={this.props.weekPlanning[0]} />
-        <Day dayPlanning={this.props.weekPlanning[1]} />
+        <p>{this.props.weekPlan.name}</p>
+        {this.props.weekPlan.weekPlan.map((dayPlan, i)=>{
+          return <Day dayPlan={dayPlan} key={i} />
+        })}
       </div>
     );
   }

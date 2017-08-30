@@ -5,7 +5,9 @@ class Schedules extends React.Component {
   render(){
     return (
       <div className='schedules'>
-        <Week weekPlanning={this.props.weekPlanning} />
+        {this.props.plans.map((weekPlan, i)=>{
+          return <Week weekPlan={weekPlan} key={i} />
+        })}
       </div>
     )
   }
