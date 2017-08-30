@@ -68,7 +68,7 @@ class Dish extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      devMode: true,   // --- REMOVE THIS -------------------------------- REMOVE THIS ------
+      devMode: false,   // --- REMOVE THIS -------------------------------- REMOVE THIS ------
       name: this.props.dish.name,     // string with dish name
       editionModeOn: false,
       recipe: this.props.dish.recipe, // array with ingredients

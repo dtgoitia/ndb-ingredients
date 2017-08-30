@@ -49,6 +49,10 @@ li {
 div {
   text-align: center;
 }
+h3, h4 {
+  margin: 0px;
+  padding: 0px;
+}
 
 
 /* --- NAVIGATION BAR ----------------------------------- */
@@ -145,7 +149,8 @@ div {
 }
 .Monday, .Tuesday, .Wednesday, .Thursday, .Friday, .Saturday, .Sunday {
   border-radius: 10px;
-  border: 1px solid yellow;
+  border: 1px solid grey;
+  background-color: var(--color-header-background);
   cursor: pointer;
 }
 .Monday    { grid-column: 1 }
@@ -155,10 +160,28 @@ div {
 .Friday    { grid-column: 5 }
 .Saturday  { grid-column: 6 }
 .Sunday    { grid-column: 7 }
+
+.day h3 {
+  text-align: right;
+  padding: 10px 15px;
+  margin: 0px;
+  font-weight: normal;
+  font-size: 85%;
+  text-transform: uppercase;
+}
+.meal {
+  margin: 0;
+  padding: 0;
+}
+.meal > h4 {
+  text-align: left;
+  padding: 0px 15px 5 px 15px;
+  margin: 0px;
+}
 .schedulesDish {
   padding: 5px;
   text-align: left;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 .schedulesDish input[type=text] {
   grid-column: 1;
@@ -166,12 +189,18 @@ div {
 
   padding: 5px 5px 5px 8px;
   font-size: 110%;
+
+  color: var(--color-p);
+  border: 0px;
+  border-bottom: 1px solid grey;
+  width: 80%;
+  background-color: var(--color-body-background);
 }
 .scheduleDishIngredientList {
   grid-template-columns: 100px 100px auto;
   padding: 5px;
   text-align: left;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 .scheduleDishIngredientList ingredientName {
   grid-column: 1;
