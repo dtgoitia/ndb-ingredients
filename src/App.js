@@ -9,9 +9,9 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      load: true,
-      activeTab: 'Ingredient Search',
-      // activeTab: 'Schedules',
+      load: false,
+      // activeTab: 'Ingredient Search',
+      activeTab: 'Schedules',
       ingredientList: [],
       plans: [{
         name: "Week plan 1",
