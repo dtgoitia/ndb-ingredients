@@ -181,7 +181,16 @@ h3, h4 {
 .schedulesDish {
   padding: 5px;
   text-align: left;
-  /* border: 1px solid yellow; */
+}
+.dishTopMenu {
+  display: flex;
+}
+.editSymbolSvg {
+  padding: 5px;
+  height: 20px;
+}
+.editSymbolSvg:hover {
+  fill: grey;
 }
 .schedulesDish input[type=text] {
   grid-column: 1;
@@ -196,11 +205,14 @@ h3, h4 {
   width: 80%;
   background-color: var(--color-body-background);
 }
+.editDishButton {
+  background-color: green;
+  
+}
 .scheduleDishIngredientList {
   grid-template-columns: 100px 100px auto;
   padding: 5px;
   text-align: left;
-  /* border: 1px solid yellow; */
 }
 .scheduleDishIngredientList ingredientName {
   grid-column: 1;

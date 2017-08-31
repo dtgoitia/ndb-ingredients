@@ -1,4 +1,5 @@
 import React from 'react';
+import EditButton from './EditButton';
 
 class DishName extends React.Component {
   constructor(props){
@@ -25,18 +26,6 @@ class DishName extends React.Component {
         value={this.state.name}
         onChange={this.handleChange.bind(null)}
       />
-    );
-  }
-}
-
-class DishEditButton extends React.Component {
-  render() {
-    return (
-      <div
-        onClick={this.props.changeEditionMode.bind(null)}
-      >
-        EDIT
-      </div>
     );
   }
 }
@@ -101,8 +90,10 @@ class Dish extends React.Component {
     if (this.state.devMode === false) {
       return (
         <div className='schedulesDish'>
-          <DishName name={this.props.name} updateDishName={this.updateDishName} />
-          <DishEditButton changeEditionMode={this.changeEditionMode} />
+          <div className='dishTopMenu'>
+            <DishName name={this.props.name} updateDishName={this.updateDishName} />
+            <EditButton changeEditionMode={this.changeEditionMode} />
+          </div>
           {
             this.state.editionModeOn === true
             ? <DishaddNewIngredientButton addNewIngredient={this.addNewIngredient} />
