@@ -13,7 +13,12 @@ class App extends React.Component {
       // activeTab: 'Ingredient Search',
       activeTab: 'Schedules',
       ingredientList: [],
-      plans: [{
+      plans: [
+        {
+          name: 'as',
+          weekPlan: []
+        }
+        ,{
         name: "Week plan 1",
         weekPlan: [
           {

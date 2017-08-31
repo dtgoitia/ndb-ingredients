@@ -15,20 +15,36 @@ class Week extends React.Component {
   }
 
   render() {
-    return (
-      <div className='week'>
-        <h2 onClick={()=>{this.selectDay('None')}}>{this.props.weekPlan.name}</h2>
-        {this.props.weekPlan.weekPlan.map((dayPlan, i)=>{
-          return (
-            <Day
-              dayPlan={dayPlan}
-              key={i}
-              selectDay={this.selectDay}
-            />
-          )
-        })}
-      </div>
-    );
+    const plan = this.props.weekPlan;
+    if (
+      typeof(plan) === 'object'
+      && plan.name
+      && plan.weekPlan
+      && typeof(plan.name) === 'string'
+      && Array.isArray(plan.weekPlan) === true
+      && plan.weekPlan.length > 0
+    ) {
+      return (
+        <div className='week'>
+          <h2 onClick={()=>{this.selectDay('None')}}>{plan.name}</h2>
+          {plan.weekPlan.map((dayPlan, i)=>{
+            return (
+              <Day
+                dayPlan={dayPlan}
+                key={i}
+                selectDay={this.selectDay}
+              />
+            )
+          })}
+        </div>
+      );
+    } else {
+      return (
+        <div className='schedules'>
+          There are no days in this week!
+        </div>
+      )
+    }
   }
 }
 
