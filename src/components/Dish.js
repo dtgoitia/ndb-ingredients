@@ -89,7 +89,7 @@ class Dish extends React.Component {
     // console.log('this.state:', this.state);
     if (this.state.devMode === false) {
       return (
-        <div className='schedulesDish'>
+        <div className='dish'>
           <div className='dishTopMenu'>
             <DishName name={this.props.name} updateDishName={this.updateDishName} />
             <EditButton changeEditionMode={this.changeEditionMode} />
@@ -101,7 +101,7 @@ class Dish extends React.Component {
           }
           {
             this.state.editionModeOn === true
-            ? <div className='scheduleDishIngredientList'>
+            ? <div className='dishIngredientList'>
                 <ul>
                   {this.state.recipe.map((ingredient,i)=>{
                     return <DishIngredient ingredient={ingredient} key={i} />

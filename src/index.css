@@ -172,13 +172,19 @@ h3, h4 {
 .meal {
   margin: 0;
   padding: 0;
+  /* border-top: 1px solid yellow; */
+}
+.mealBar {
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+  width: 90%;
+  margin: 0px auto;
 }
 .meal > h4 {
   text-align: left;
-  padding: 0px 15px 5 px 15px;
-  margin: 0px;
+  padding: 0px 15px 5px 15px;
+  margin: 5px 0 0 0;
 }
-.schedulesDish {
+.dish {
   padding: 5px;
   text-align: left;
 }
@@ -192,7 +198,7 @@ h3, h4 {
 .editSymbolSvg:hover {
   fill: grey;
 }
-.schedulesDish input[type=text] {
+.dish input[type=text] {
   grid-column: 1;
   grid-row: 1;
 
@@ -201,7 +207,7 @@ h3, h4 {
 
   color: var(--color-p);
   border: 0px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
   width: 80%;
   background-color: var(--color-body-background);
 }
@@ -209,19 +215,19 @@ h3, h4 {
   background-color: green;
   
 }
-.scheduleDishIngredientList {
+.dishIngredientList {
   grid-template-columns: 100px 100px auto;
   padding: 5px;
   text-align: left;
 }
-.scheduleDishIngredientList ingredientName {
+.dishIngredientList ingredientName {
   grid-column: 1;
 }
-.scheduleDishIngredientList ingredientCalories {
+.dishIngredientList ingredientCalories {
   grid-column: 2;
 }
-.scheduleDishIngredientList ingredientName,
-.scheduleDishIngredientList ingredientCalories {
+.dishIngredientList ingredientName,
+.dishIngredientList ingredientCalories {
   padding: 5px;
   border: 1px solid red;
 }
