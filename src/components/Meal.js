@@ -3,15 +3,27 @@ import Dish from './Dish';
 
 class Meal extends React.Component {
   render() {
-    return (
-      <div className='meal'>
-        <div className='mealBar'></div>
-        <h4>{this.props.meal.name}</h4>
-        {this.props.meal.dishes.map((dish,i)=>{
-          return <Dish dish={dish} key={i} />
-        })}
-      </div>
-    );
+    const meal = this.props.meal;
+    if (
+      typeof(meal) === 'object'
+      && meal.name
+      && meal.dishes
+      && typeof(meal.name) === 'string'
+      && Array.isArray(meal.dishes) === true
+      && meal.dishes.length > 0
+    ) {
+      return (
+        <div className='meal'>
+          <div className='mealBar'></div>
+          <h4>{meal.name}</h4>
+          {meal.dishes.map((dish,i)=>{
+            return <Dish dish={dish} key={i} />
+          })}
+        </div>
+      );
+    } else {
+      return <div>There is no info in this meal!</div>
+    }
   }
 }
 

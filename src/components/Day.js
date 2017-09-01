@@ -3,17 +3,33 @@ import Meal from './Meal';
 
 class Day extends React.Component {
   render() {
-    return (
-      <div
-        className={'day ' + this.props.dayPlan.day}
-        onClick={()=>{this.props.selectDay(this.props.dayPlan.day)}}
-      >
-        <h3>{this.props.dayPlan.day}</h3>
-        {this.props.dayPlan.meals.map((meal,i)=>{
-          return <Meal meal={meal} key={i} />
-        })}
-      </div>
-    );
+    const plan = this.props.dayPlan;
+    if (
+      typeof(plan) === 'object'
+      && plan.day
+      && plan.meals
+      && typeof(plan.day) === 'string'
+      && Array.isArray(plan.meals) === true
+      && plan.meals.length > 0
+    ) {
+      return (
+        <div
+          className={'day ' + plan.day}
+          onClick={()=>{this.props.selectDay(plan.day)}}
+        >
+          <h3>{plan.day}</h3>
+          {plan.meals.map((meal,i)=>{
+            return <Meal meal={meal} key={i} />
+          })}
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          There is no info in this day!
+        </div>
+      )
+    }
   }
 }
 

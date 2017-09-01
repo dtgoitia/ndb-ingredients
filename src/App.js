@@ -15,10 +15,6 @@ class App extends React.Component {
       ingredientList: [],
       plans: [
         {
-          name: 'as',
-          weekPlan: []
-        }
-        ,{
         name: "Week plan 1",
         weekPlan: [
           {
@@ -349,7 +345,7 @@ class App extends React.Component {
                   {
                     name: 'Basic salad',
                     recipe: [
-                      {name: "ingredient 1", calories: "loads"},
+                      {name: "ingredient 1", calor: "loads"},
                       {name: "ingredient 2", calories: "less"},
                     ]
                   },
@@ -373,14 +369,14 @@ class App extends React.Component {
                       {name: "ingredient 2", calories: "less"},
                     ]
                   },
-                  {
-                    name: 'Basic salad feta 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
+                  // {
+                  //   name: 'Basic salad feta 2',
+                  //   recipe: [
+                  //     {name: "ingredient 1", calories: "loads"},
+                  //     {name: "ingredient 2", calories: "less"},
+                  //     {name: "feta cheese", calories: "a bit"},
+                  //   ]
+                  // }
                 ]
               }
             ]

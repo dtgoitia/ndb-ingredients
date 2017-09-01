@@ -44,10 +44,17 @@ class DishaddNewIngredientButton extends React.Component {
 
 class DishIngredient extends React.Component {
   render() {
+    const ingredient = this.props.ingredient;
+    const ingredientKeys = Object.keys(ingredient);
     return (
       <li className='dishIngredientRow' key={this.props.i}>
-        <div className='ingredientName'>{this.props.ingredient.name}</div>
-        <div className='ingredientCalories'>{this.props.ingredient.calories}</div>
+        {ingredientKeys.map((ingredientKey, i)=>{
+          return(
+            <div className={'ingredient' + ingredientKey} key={i}>
+              {ingredientKey}: {ingredient[ingredientKey]}
+            </div>
+          );
+        })}
       </li>
     );
   }
@@ -87,7 +94,17 @@ class Dish extends React.Component {
 
   render(){
     // console.log('this.state:', this.state);
-    if (this.state.devMode === false) {
+    const dish = this.props.dish;
+    if (
+      // this.state.devMode === false &&
+
+      typeof(dish) === 'object'
+      && dish.name
+      && dish.recipe
+      && typeof(dish.name) === 'string'
+      && Array.isArray(dish.recipe) === true
+      && dish.recipe.length > 0
+    ) {
       return (
         <div className='dish'>
           <div className='dishTopMenu'>
@@ -110,11 +127,10 @@ class Dish extends React.Component {
               </div>
             : null
           }
-          
         </div>
       )
     } else {
-      return <div>I am a dish</div>
+      return <div>There is no info in this dish!</div>
     }
     
   }

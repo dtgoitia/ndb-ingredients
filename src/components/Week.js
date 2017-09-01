@@ -40,7 +40,8 @@ class Week extends React.Component {
       );
     } else {
       return (
-        <div className='schedules'>
+        <div className='week'>
+          {plan.name && typeof(plan.name) === 'string' ? <h2>{plan.name}</h2> : <h2>Unnamed week</h2>}
           There are no days in this week!
         </div>
       )
