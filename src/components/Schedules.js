@@ -1,7 +1,38 @@
 import React from 'react';
 import Week from './Week';
+import Input from './Input';
+
+class AddWeek extends React.Component {
+  render() {
+    return (
+      <div className='addWeek'>
+        <form onSubmit={this.props.handleAddWeekSubmit}>
+          <Input
+            id='addWeekInput'
+            placeholder='Write a week name!'
+          />
+        </form>
+      </div>
+    );
+  }
+}
 
 class Schedules extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {}
+
+    this.handleAddWeekSubmit = this.handleAddWeekSubmit.bind(this);
+  }
+
+  handleAddWeekSubmit(event){
+    // Get input value (new week name)
+    const newWeekName = document.getElementById('addWeekInput').value;
+    // Pass new week name to App component to be added to the state
+    this.props.addWeek(newWeekName);
+    event.preventDefault(); // Prevent page reloading on form submit
+  }
+
   render(){
     const plans = this.props.plans;
     if(
@@ -18,7 +49,7 @@ class Schedules extends React.Component {
     } else {
       return (
         <div className='schedules'>
-          There is not planning!
+          <AddWeek handleAddWeekSubmit={this.handleAddWeekSubmit} />
         </div>
       )
     }

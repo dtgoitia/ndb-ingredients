@@ -1,4 +1,4 @@
 {
-  "autosave": true,
-  "loadAutoSaveOnStart": true
+  "autosave": false,
+  "loadAutoSaveOnStart": false
 }

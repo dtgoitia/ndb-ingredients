@@ -15,653 +15,750 @@ class App extends React.Component {
       ingredientList: [],
       plans: [
         {
-        name: "Week plan 1",
-        weekPlan: [
-          {
-            day: 'Monday',
-            meals: [
-              {
-                name: 'Meal 1',
-                dishes: [
-                  {
-                    name: 'Basic salad',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              },
-              {
-                name: 'Meal 2',
-                dishes: [
-                  {
-                    name: 'Basic salad 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            day: 'Tuesday',
-            meals: [
-              {
-                name: 'Meal 1',
-                dishes: [
-                  {
-                    name: 'Basic salad',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              },
-              {
-                name: 'Meal 2',
-                dishes: [
-                  {
-                    name: 'Basic salad 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            day: 'Wednesday',
-            meals: [
-              {
-                name: 'Meal 1',
-                dishes: [
-                  {
-                    name: 'Basic salad',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              },
-              {
-                name: 'Meal 2',
-                dishes: [
-                  {
-                    name: 'Basic salad 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            day: 'Thursday',
-            meals: [
-              {
-                name: 'Meal 1',
-                dishes: [
-                  {
-                    name: 'Basic salad',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              },
-              {
-                name: 'Meal 2',
-                dishes: [
-                  {
-                    name: 'Basic salad 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            day: 'Friday',
-            meals: [
-              {
-                name: 'Meal 1',
-                dishes: [
-                  {
-                    name: 'Basic salad',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              },
-              {
-                name: 'Meal 2',
-                dishes: [
-                  {
-                    name: 'Basic salad 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            day: 'Saturday',
-            meals: [
-              {
-                name: 'Meal 1',
-                dishes: [
-                  {
-                    name: 'Basic salad',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              },
-              {
-                name: 'Meal 2',
-                dishes: [
-                  {
-                    name: 'Basic salad 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            day: 'Sunday',
-            meals: [
-              {
-                name: 'Meal 1',
-                dishes: [
-                  {
-                    name: 'Basic salad',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              },
-              {
-                name: 'Meal 2',
-                dishes: [
-                  {
-                    name: 'Basic salad 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },{
-        name: "Week plan 2",
-        weekPlan: [
-          {
-            day: 'Monday',
-            meals: [
-              {
-                name: 'Meal 1',
-                dishes: [
-                  {
-                    name: 'Basic salad',
-                    recipe: [
-                      {name: "ingredient 1", calor: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              },
-              {
-                name: 'Meal 2',
-                dishes: [
-                  {
-                    name: 'Basic salad 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  // {
-                  //   name: 'Basic salad feta 2',
-                  //   recipe: [
-                  //     {name: "ingredient 1", calories: "loads"},
-                  //     {name: "ingredient 2", calories: "less"},
-                  //     {name: "feta cheese", calories: "a bit"},
-                  //   ]
-                  // }
-                ]
-              }
-            ]
-          },
-          {
-            day: 'Tuesday',
-            meals: [
-              {
-                name: 'Meal 1',
-                dishes: [
-                  {
-                    name: 'Basic salad',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              },
-              {
-                name: 'Meal 2',
-                dishes: [
-                  {
-                    name: 'Basic salad 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            day: 'Wednesday',
-            meals: [
-              {
-                name: 'Meal 1',
-                dishes: [
-                  {
-                    name: 'Basic salad',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              },
-              {
-                name: 'Meal 2',
-                dishes: [
-                  {
-                    name: 'Basic salad 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            day: 'Thursday',
-            meals: [
-              {
-                name: 'Meal 1',
-                dishes: [
-                  {
-                    name: 'Basic salad',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              },
-              {
-                name: 'Meal 2',
-                dishes: [
-                  {
-                    name: 'Basic salad 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            day: 'Friday',
-            meals: [
-              {
-                name: 'Meal 1',
-                dishes: [
-                  {
-                    name: 'Basic salad',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              },
-              {
-                name: 'Meal 2',
-                dishes: [
-                  {
-                    name: 'Basic salad 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            day: 'Saturday',
-            meals: [
-              {
-                name: 'Meal 1',
-                dishes: [
-                  {
-                    name: 'Basic salad',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              },
-              {
-                name: 'Meal 2',
-                dishes: [
-                  {
-                    name: 'Basic salad 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            day: 'Sunday',
-            meals: [
-              {
-                name: 'Meal 1',
-                dishes: [
-                  {
-                    name: 'Basic salad',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              },
-              {
-                name: 'Meal 2',
-                dishes: [
-                  {
-                    name: 'Basic salad 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                    ]
-                  },
-                  {
-                    name: 'Basic salad feta 2',
-                    recipe: [
-                      {name: "ingredient 1", calories: "loads"},
-                      {name: "ingredient 2", calories: "less"},
-                      {name: "feta cheese", calories: "a bit"},
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
+          name: 'Untitled week',
+          weekPlan: [
+            {
+              day: 'Monday',
+              meals: [],
+            },
+            {
+              day: 'Tuesday',
+              meals: [],
+            },
+            {
+              day: 'Wednesday',
+              meals: [],
+            },
+            {
+              day: 'Thursday',
+              meals: [],
+            },
+            {
+              day: 'Friday',
+              meals: [],
+            },
+            {
+              day: 'Saturday',
+              meals: [],
+            },
+            {
+              day: 'Sunday',
+              meals: [],
+            },
+
+          ]
+        }
+      ],
+      kplans: [
+        {
+          name: "Week plan 1",
+          weekPlan: [
+            {
+              day: 'Monday',
+              meals: [
+                {
+                  name: 'Meal 1',
+                  dishes: [
+                    {
+                      name: 'Basic salad',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'Meal 2',
+                  dishes: [
+                    {
+                      name: 'Basic salad 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              day: 'Tuesday',
+              meals: [
+                {
+                  name: 'Meal 1',
+                  dishes: [
+                    {
+                      name: 'Basic salad',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'Meal 2',
+                  dishes: [
+                    {
+                      name: 'Basic salad 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              day: 'Wednesday',
+              meals: [
+                {
+                  name: 'Meal 1',
+                  dishes: [
+                    {
+                      name: 'Basic salad',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'Meal 2',
+                  dishes: [
+                    {
+                      name: 'Basic salad 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              day: 'Thursday',
+              meals: [
+                {
+                  name: 'Meal 1',
+                  dishes: [
+                    {
+                      name: 'Basic salad',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'Meal 2',
+                  dishes: [
+                    {
+                      name: 'Basic salad 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              day: 'Friday',
+              meals: [
+                {
+                  name: 'Meal 1',
+                  dishes: [
+                    {
+                      name: 'Basic salad',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'Meal 2',
+                  dishes: [
+                    {
+                      name: 'Basic salad 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              day: 'Saturday',
+              meals: [
+                {
+                  name: 'Meal 1',
+                  dishes: [
+                    {
+                      name: 'Basic salad',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'Meal 2',
+                  dishes: [
+                    {
+                      name: 'Basic salad 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              day: 'Sunday',
+              meals: [
+                {
+                  name: 'Meal 1',
+                  dishes: [
+                    {
+                      name: 'Basic salad',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'Meal 2',
+                  dishes: [
+                    {
+                      name: 'Basic salad 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },{
+          name: "Week plan 2",
+          weekPlan: [
+            {
+              day: 'Monday',
+              meals: [
+                {
+                  name: 'Meal 1',
+                  dishes: [
+                    {
+                      name: 'Basic salad',
+                      recipe: [
+                        {name: "ingredient 1", calor: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'Meal 2',
+                  dishes: [
+                    {
+                      name: 'Basic salad 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    // {
+                    //   name: 'Basic salad feta 2',
+                    //   recipe: [
+                    //     {name: "ingredient 1", calories: "loads"},
+                    //     {name: "ingredient 2", calories: "less"},
+                    //     {name: "feta cheese", calories: "a bit"},
+                    //   ]
+                    // }
+                  ]
+                }
+              ]
+            },
+            {
+              day: 'Tuesday',
+              meals: [
+                {
+                  name: 'Meal 1',
+                  dishes: [
+                    {
+                      name: 'Basic salad',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'Meal 2',
+                  dishes: [
+                    {
+                      name: 'Basic salad 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              day: 'Wednesday',
+              meals: [
+                {
+                  name: 'Meal 1',
+                  dishes: [
+                    {
+                      name: 'Basic salad',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'Meal 2',
+                  dishes: [
+                    {
+                      name: 'Basic salad 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              day: 'Thursday',
+              meals: [
+                {
+                  name: 'Meal 1',
+                  dishes: [
+                    {
+                      name: 'Basic salad',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'Meal 2',
+                  dishes: [
+                    {
+                      name: 'Basic salad 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              day: 'Friday',
+              meals: [
+                {
+                  name: 'Meal 1',
+                  dishes: [
+                    {
+                      name: 'Basic salad',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'Meal 2',
+                  dishes: [
+                    {
+                      name: 'Basic salad 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              day: 'Saturday',
+              meals: [
+                {
+                  name: 'Meal 1',
+                  dishes: [
+                    {
+                      name: 'Basic salad',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'Meal 2',
+                  dishes: [
+                    {
+                      name: 'Basic salad 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              day: 'Sunday',
+              meals: [
+                {
+                  name: 'Meal 1',
+                  dishes: [
+                    {
+                      name: 'Basic salad',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                },
+                {
+                  name: 'Meal 2',
+                  dishes: [
+                    {
+                      name: 'Basic salad 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                      ]
+                    },
+                    {
+                      name: 'Basic salad feta 2',
+                      recipe: [
+                        {name: "ingredient 1", calories: "loads"},
+                        {name: "ingredient 2", calories: "less"},
+                        {name: "feta cheese", calories: "a bit"},
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       ]
     }
 
     this.addIngredientsToMyCollection = this.addIngredientsToMyCollection.bind(this);
+    this.addWeek = this.addWeek.bind(this);
+    this.addMeal = this.addMeal.bind(this);
     this.changeActiveTab = this.changeActiveTab.bind(this);
     this.save = this.save.bind(this);
 
     this.loadConfig();
     
+  }
+  
+  // Add an empty week to the state
+  addWeek(newWeekName){
+    const prevPlans = this.state.plans;
+    if (Array.isArray(prevPlans) && prevPlans.length > 0) {
+      alert('cuidado que this.state.plans es un array y tiene algo!');
+    } else {
+      this.setState({
+        plans: [
+          {
+            name: newWeekName ? newWeekName : 'Untitled week',
+            weekPlan: [
+              {
+                day: 'Monday',
+                meals: [],
+              },
+              {
+                day: 'Tuesday',
+                meals: [],
+              },
+              {
+                day: 'Wednesday',
+                meals: [],
+              },
+              {
+                day: 'Thursday',
+                meals: [],
+              },
+              {
+                day: 'Friday',
+                meals: [],
+              },
+              {
+                day: 'Saturday',
+                meals: [],
+              },
+              {
+                day: 'Sunday',
+                meals: [],
+              },
+
+            ]
+          }
+        ]
+      });
+    }
+  }
+
+  // Add a meal to a specific day and meal
+  addMeal(weekName, mealObject){
+    console.log('weekName:', weekName);
+    console.log('mealObject:', mealObject);
+    // Check if week exists
+    // if T add meal
+
+    // don't worry about existing meals,
+    // you will handle this cases with,
+    // updateMeal() or similar
   }
 
   // Change the active tab shown on screen
@@ -745,6 +842,7 @@ class App extends React.Component {
           <Schedules
             ingredientList={this.state.ingredientList}
             plans={this.state.plans}
+            addWeek={this.addWeek}
           /> : null
         }
       </div>

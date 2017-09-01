@@ -25,8 +25,12 @@ class Day extends React.Component {
       );
     } else {
       return (
-        <div>
-          There is no info in this day!
+        <div
+          className={'day ' + plan.day}
+          onClick={()=>{this.props.selectDay(plan.day)}}
+        >
+          <h3>{plan.day}</h3>
+          no meals
         </div>
       )
     }

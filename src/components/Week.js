@@ -18,7 +18,7 @@ class Week extends React.Component {
     const plan = this.props.weekPlan;
     if (
       typeof(plan) === 'object'
-      && plan.name
+      && (plan.name || plan.name === '')
       && plan.weekPlan
       && typeof(plan.name) === 'string'
       && Array.isArray(plan.weekPlan) === true
@@ -39,10 +39,11 @@ class Week extends React.Component {
         </div>
       );
     } else {
+      console.error('Properties passed to Week component (this.props):', this.props);
       return (
         <div className='week'>
-          {plan.name && typeof(plan.name) === 'string' ? <h2>{plan.name}</h2> : <h2>Unnamed week</h2>}
-          There are no days in this week!
+          <h1>Something went wrong...</h1>
+          <p>check log for more detail ;)</p>
         </div>
       )
     }
