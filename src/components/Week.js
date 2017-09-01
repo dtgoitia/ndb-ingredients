@@ -10,7 +10,7 @@ class Week extends React.Component {
     this.selectDay = this.selectDay.bind(this);
   }
   selectDay(day){
-    console.info(day + ' expanded!');
+    // console.info(day + ' expanded!');
     document.documentElement.style.setProperty('--gridCurrent', 'var(--grid' + day + ')');
   }
 
@@ -30,9 +30,11 @@ class Week extends React.Component {
           {plan.weekPlan.map((dayPlan, i)=>{
             return (
               <Day
+                weekName={plan.name}
                 dayPlan={dayPlan}
                 key={i}
                 selectDay={this.selectDay}
+                addMeal={this.props.addMeal}
               />
             )
           })}

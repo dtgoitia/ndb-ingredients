@@ -1,14 +1,14 @@
 :root {
   --gridCurrent: var(--gridNone);
   --gridExpansion: 40%;
-  --gridNone:      auto auto auto auto auto auto auto;
-  --gridMonday:    var(--gridExpansion) auto auto auto auto auto auto;
-  --gridTuesday:   auto var(--gridExpansion) auto auto auto auto auto;
-  --gridWednesday: auto auto var(--gridExpansion) auto auto auto auto;
-  --gridThursday:  auto auto auto var(--gridExpansion) auto auto auto;
-  --gridFriday:    auto auto auto auto var(--gridExpansion) auto auto;
-  --gridSaturday:  auto auto auto auto auto var(--gridExpansion) auto;
-  --gridSunday:    auto auto auto auto auto auto var(--gridExpansion);
+  --gridNone:      1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  --gridMonday:    var(--gridExpansion) 1fr 1fr 1fr 1fr 1fr 1fr;
+  --gridTuesday:   1fr var(--gridExpansion) 1fr 1fr 1fr 1fr 1fr;
+  --gridWednesday: 1fr 1fr var(--gridExpansion) 1fr 1fr 1fr 1fr;
+  --gridThursday:  1fr 1fr 1fr var(--gridExpansion) 1fr 1fr 1fr;
+  --gridFriday:    1fr 1fr 1fr 1fr var(--gridExpansion) 1fr 1fr;
+  --gridSaturday:  1fr 1fr 1fr 1fr 1fr var(--gridExpansion) 1fr;
+  --gridSunday:    1fr 1fr 1fr 1fr 1fr 1fr var(--gridExpansion);
 
   --color-body-background: #1b2839;
   --color-h1: rgba(255, 255, 255, 0.70);
@@ -159,7 +159,6 @@ h3, h4 {
   width: 600px;
   height: 105px;
   border: none;
-  /* border-bottom: 1px solid var(--color-search-results-unselected); */
   border-bottom: 1px solid rgba(255, 255, 255, 0.51);
   text-align: center;
   color: white;
@@ -195,6 +194,31 @@ h3, h4 {
   font-weight: normal;
   font-size: 85%;
   text-transform: uppercase;
+}
+.addMeal form {
+  padding-top: 20px;
+  padding-bottom: 20px;  
+}
+.addMeal input[type=text] {
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 100%;
+  margin: 10px;
+  width: calc(100% - 80px);
+  padding: 12px;
+  border: none;
+  /* border-radius: 5px; */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.51);
+  text-align: left;
+  color: white;
+}
+.addMeal input[type=text]:focus{
+  background-color: var(--color-search-results-unselected);
+  width: calc(100% - 80px);
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
+  border-radius: 10px;
+
 }
 .meal {
   margin: 0;

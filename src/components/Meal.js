@@ -22,7 +22,13 @@ class Meal extends React.Component {
         </div>
       );
     } else {
-      return <div>There is no info in this meal!</div>
+      return(
+        <div className='meal'>
+          <div className='mealBar'></div>
+          <h4>{meal.name}</h4>
+          <div>There are no dishes is this meal!</div>
+        </div>
+      );
     }
   }
 }

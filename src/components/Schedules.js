@@ -9,7 +9,7 @@ class AddWeek extends React.Component {
         <form onSubmit={this.props.handleAddWeekSubmit}>
           <Input
             id='addWeekInput'
-            placeholder='Write a week name!'
+            placeholder='Write week name!'
           />
         </form>
       </div>
@@ -42,7 +42,13 @@ class Schedules extends React.Component {
       return (
         <div className='schedules'>
           {plans.map((weekPlan, i)=>{
-            return <Week weekPlan={weekPlan} key={i} />
+            return(
+              <Week
+                weekPlan={weekPlan}
+                key={i}
+                addMeal={this.props.addMeal}
+              />
+            )
           })}
         </div>
       )

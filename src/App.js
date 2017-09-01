@@ -750,11 +750,35 @@ class App extends React.Component {
   }
 
   // Add a meal to a specific day and meal
-  addMeal(weekName, mealObject){
-    console.log('weekName:', weekName);
-    console.log('mealObject:', mealObject);
-    // Check if week exists
-    // if T add meal
+  addMeal(weekName, dayName, newMealObject){
+    // Get previous state
+    const prevState = this.state.plans;
+
+    // Duplicate state and inject meal
+    let newState = prevState.map((weekObject, iWeek)=>{
+      if (weekObject.name === weekName) {
+        return({ // If it's the same week, return a week object:
+          name: weekName,
+          weekPlan: weekObject.weekPlan.map((dayObject, iDay)=>{
+
+            if (dayObject.day === dayName) {
+              // If it's the same day, add meal to current meal array
+              let newMealArray = dayObject.meals;
+              newMealArray.push(newMealObject);
+              // and return the updated day object
+              return { day: dayName, meals: newMealArray } 
+            } else {
+              return dayObject;
+            }
+          })
+        });
+      } else {
+        return weekObject;
+      }
+    });
+
+    // Update state
+    this.setState({ plans: newState });
 
     // don't worry about existing meals,
     // you will handle this cases with,
@@ -826,6 +850,7 @@ class App extends React.Component {
     }
 
     // console.log('App > this.state:', this.state);
+    console.log('App > this.state:', this.state.plans[0].weekPlan[0].meals);
     return (
       <div className="App">
         <NavigationBar activeTab={this.state.activeTab} changeActiveTab={this.changeActiveTab} />
@@ -843,6 +868,7 @@ class App extends React.Component {
             ingredientList={this.state.ingredientList}
             plans={this.state.plans}
             addWeek={this.addWeek}
+            addMeal={this.addMeal}
           /> : null
         }
       </div>
