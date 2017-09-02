@@ -15,11 +15,16 @@ class App extends React.Component {
       ingredientList: [],
       plans: [
         {
-          name: 'Untitled week',
+          name: 'Test week name',
           weekPlan: [
             {
               day: 'Monday',
-              meals: [],
+              meals: [
+                {
+                  name: 'Test meal :)',
+                  dishes: []
+                }
+              ],
             },
             {
               day: 'Tuesday',
@@ -785,6 +790,14 @@ class App extends React.Component {
     // updateMeal() or similar
   }
 
+  // Add a dish to a specific meal
+  addDish(weekName, dayName, mealName, newDishObject){
+    console.log('<App/>.addDish << weekName:', weekName);
+    console.log('<App/>.addDish << dayName:', dayName);
+    console.log('<App/>.addDish << mealName:', mealName);
+    console.log('<App/>.addDish << newDishObject:', newDishObject);
+  }
+
   // Change the active tab shown on screen
   changeActiveTab(navigationBarItem){
     this.setState({activeTab: navigationBarItem})
@@ -869,6 +882,7 @@ class App extends React.Component {
             plans={this.state.plans}
             addWeek={this.addWeek}
             addMeal={this.addMeal}
+            addDish={this.addDish}
           /> : null
         }
       </div>

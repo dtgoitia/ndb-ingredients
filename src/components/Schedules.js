@@ -47,6 +47,7 @@ class Schedules extends React.Component {
                 weekPlan={weekPlan}
                 key={i}
                 addMeal={this.props.addMeal}
+                addDish={this.props.addDish}
               />
             )
           })}

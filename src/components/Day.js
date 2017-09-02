@@ -58,10 +58,14 @@ class Day extends React.Component {
   // Recieve new meal name from child <AddMeal /> and pass all the necessary
   // information to <App /> to update <App /> state to add the new meal
   handleAddMealSubmit(newMealName){
-    this.props.addMeal(this.props.weekName, this.props.dayPlan.day, {
-      name: newMealName,
-      dishes: []
-    });
+    this.props.addMeal(
+      this.props.weekName,      // week name
+      this.props.dayPlan.day,   // day name
+      {                         // new meal object:
+        name: newMealName,      //  - meal name
+        dishes: []              //  - no dishes (empty meal)
+      }
+    );
     // Do not use here event.preventDefault() !!
   }
   render() {
@@ -81,9 +85,17 @@ class Day extends React.Component {
         >
           <h3>{plan.day}</h3>
           {plan.meals.map((meal,i)=>{
-            return <Meal meal={meal} key={i} />
+            return(
+              <Meal
+                meal={meal}
+                key={i}
+                addDish={this.props.addDish}
+                day={plan.day}
+                week={this.props.weekName}
+              />
+            );
           })}
-          <AddMeal handleAddMealSubmit={this.handleAddMealSubmit} day={plan.day} />
+          <AddMeal handleAddMealSubmit={this.handleAddMealSubmit} />
         </div>
       );
     } else {
@@ -93,7 +105,7 @@ class Day extends React.Component {
           onClick={()=>{this.props.selectDay(plan.day)}}
         >
           <h3>{plan.day}</h3>
-          <AddMeal handleAddMealSubmit={this.handleAddMealSubmit} day={plan.day} />
+          <AddMeal handleAddMealSubmit={this.handleAddMealSubmit} />
         </div>
       )
     }
