@@ -700,6 +700,7 @@ class App extends React.Component {
     this.addIngredientsToMyCollection = this.addIngredientsToMyCollection.bind(this);
     this.addWeek = this.addWeek.bind(this);
     this.addMeal = this.addMeal.bind(this);
+    this.addDish = this.addDish.bind(this);
     this.changeActiveTab = this.changeActiveTab.bind(this);
     this.save = this.save.bind(this);
 
@@ -760,12 +761,11 @@ class App extends React.Component {
     const prevState = this.state.plans;
 
     // Duplicate state and inject meal
-    let newState = prevState.map((weekObject, iWeek)=>{
+    const newState = prevState.map(weekObject => {
       if (weekObject.name === weekName) {
         return({ // If it's the same week, return a week object:
           name: weekName,
-          weekPlan: weekObject.weekPlan.map((dayObject, iDay)=>{
-
+          weekPlan: weekObject.weekPlan.map(dayObject => {
             if (dayObject.day === dayName) {
               // If it's the same day, add meal to current meal array
               let newMealArray = dayObject.meals;
@@ -792,10 +792,17 @@ class App extends React.Component {
 
   // Add a dish to a specific meal
   addDish(weekName, dayName, mealName, newDishObject){
+    console.log('------------------------------------ addDish()');
     console.log('<App/>.addDish << weekName:', weekName);
     console.log('<App/>.addDish << dayName:', dayName);
     console.log('<App/>.addDish << mealName:', mealName);
     console.log('<App/>.addDish << newDishObject:', newDishObject);
+
+    // Get previous state
+    const prevState = this.state.plans;
+
+        alert('new dish injection not finished!')
+
   }
 
   // Change the active tab shown on screen
