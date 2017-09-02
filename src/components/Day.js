@@ -1,17 +1,45 @@
 import React from 'react';
 import Meal from './Meal';
-import Input from './Input';
 
 class AddMeal extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      value: this.props.value ? this.props.value : ''
+    }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    // Pass the name of the meal (this.state.value) to <Day />
+    // to be added as a new meal
+    this.props.handleAddMealSubmit(this.state.value)
+
+    // Reset input value
+    this.setState({value: ''})
+
+    // Prevent page from reloading
+    event.preventDefault();
+  }
+  
   render() {
     return (
       <div className='addMeal'>
         <form 
-          id={'AddMealInput'}
-          onSubmit={this.props.handleAddMealSubmit}
+          onSubmit={this.handleSubmit}
         >
-          <Input
+          <input
+            type='text'
+            name='AddMealInput'
             placeholder='Add meal name!'
+            value={this.state.value}
+            onChange={this.handleChange.bind(null)}
           />
         </form>
       </div>
@@ -27,17 +55,14 @@ class Day extends React.Component {
     this.handleAddMealSubmit = this.handleAddMealSubmit.bind(this);
   }
 
-  handleAddMealSubmit(event){
-
-    // Get input value (new meal name)
-    const newMealName = event.target.value;
-    // Pass new meal info to <App /> to be added to its state
+  // Recieve new meal name from child <AddMeal /> and pass all the necessary
+  // information to <App /> to update <App /> state to add the new meal
+  handleAddMealSubmit(newMealName){
     this.props.addMeal(this.props.weekName, this.props.dayPlan.day, {
       name: newMealName,
       dishes: []
     });
-    // Clean input
-    event.preventDefault(); // Prevent page reloading on form submit
+    // Do not use here event.preventDefault() !!
   }
   render() {
     const plan = this.props.dayPlan;

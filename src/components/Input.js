@@ -18,7 +18,7 @@ class Input extends React.Component {
     return (
       <input
         type='text'
-        id={this.props.id ? this.props.id : null}
+        name={this.props.name ? this.props.name : null}
         className={ this.props.className ? this.props.className : null}
         placeholder={this.props.placeholder ? this.props.placeholder : null}
         value={this.state.value}

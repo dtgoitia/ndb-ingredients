@@ -706,7 +706,7 @@ class App extends React.Component {
   addWeek(newWeekName){
     const prevPlans = this.state.plans;
     if (Array.isArray(prevPlans) && prevPlans.length > 0) {
-      alert('cuidado que this.state.plans es un array y tiene algo!');
+      alert('careful! this.state.plans it\'s an array and contains something in it!');
     } else {
       this.setState({
         plans: [
@@ -850,7 +850,7 @@ class App extends React.Component {
     }
 
     // console.log('App > this.state:', this.state);
-    console.log('App > this.state:', this.state.plans[0].weekPlan[0].meals);
+    // console.log('App > this.state.plans[0].weekPlan[0].meals:', this.state.plans[0].weekPlan[0].meals);
     return (
       <div className="App">
         <NavigationBar activeTab={this.state.activeTab} changeActiveTab={this.changeActiveTab} />
