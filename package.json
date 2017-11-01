@@ -2,16 +2,6 @@
   "name": "nutrition",
   "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    "electron": "^1.4.14",
-    "foreman": "^2.0.0",
-    "react-scripts": "0.8.5"
-  },
-  "dependencies": {
-    "axios": "^0.16.2",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
-  },
   "homepage": "./",
   "main": "src/electron-starter.js",
   "scripts": {
@@ -21,5 +11,15 @@
     "eject": "react-scripts eject",
     "electron": "electron .",
     "dev": "nf start"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "electron": "^1.4.14",
+    "foreman": "^2.0.0",
+    "react-scripts": "0.8.5"
   }
 }
